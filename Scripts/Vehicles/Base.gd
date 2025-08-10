@@ -12,7 +12,7 @@ enum CameraType {
 enum InputType {
 	KEYBOARD = 0,
 	MOUSE = 1,
-	SERIAL_PORT = 2
+	#SERIAL_PORT = 2
 }
 # Power
 var power_min = -100

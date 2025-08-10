@@ -2,8 +2,8 @@ class_name Vehicle extends VehicleBase
 
 var handbrake := false
 var backward_light_on := false
-const SERCOMM = preload("res://bin/GDsercomm.gdns")
-onready var port = SERCOMM.new()
+#const SERCOMM = preload("res://bin/GDsercomm.gdns")
+#onready var port = SERCOMM.new()
 onready var horn_sound: AudioStreamPlayer3D = $HornSound
 export var engine_sound_min_pitch_scale := 0.9
 export var engine_sound_max_pitch_scale := 1.1
@@ -37,29 +37,29 @@ func _physics_process(delta):
 			process_input(Input.get_axis("accelerate_back", "accelerate"), Input.get_axis("steer_right", "steer_left"), Input.get_action_strength("brake"), delta)
 		elif input_type == InputType.MOUSE:
 			process_input(Input.get_axis("mouse_accelerate_back", "mouse_accelerate"), steer_target, Input.get_action_strength("mouse_brake"), null)
-		elif input_type == InputType.SERIAL_PORT:
-			var input = ""
-			if port.get_available() > 0:
-				for _i in range(port.get_available()):
-					var part = String(port.read())
-					input = String.join([input, part])
-			input = input.split(";")
-			if input.size() == 4:
-				# Steering
-				var steering_input = float(input[0])
-				if steering_input >= -1 and steering_input <= 1:
-					steering = steering_input * steer_limit
-				# Engine force
-				var engine_force_input = float(input[1])
-				var backward_input = int(input[2])
-				if engine_force_input > 0.0 and engine_force_input <= 1.0:
-#					accelerate(engine_force_value * engine_force_input)
-					if backward_input == 1:
-						engine_force = -engine_force
-				else:
-					engine_force = 0
-				# Brake
-				var brake_input = int(input[3])
+		#elif input_type == InputType.SERIAL_PORT:
+		#	var input = ""
+		#	if port.get_available() > 0:
+		#		for _i in range(port.get_available()):
+		#			var part = String(port.read())
+		#			input = String.join([input, part])
+		#	input = input.split(";")
+		#	if input.size() == 4:
+		#		# Steering
+		#		var steering_input = float(input[0])
+		#		if steering_input >= -1 and steering_input <= 1:
+		#			steering = steering_input * steer_limit
+		#		# Engine force
+		#		var engine_force_input = float(input[1])
+		#		var backward_input = int(input[2])
+		#		if engine_force_input > 0.0 and engine_force_input <= 1.0:
+#		#			accelerate(engine_force_value * engine_force_input)
+		#			if backward_input == 1:
+		#				engine_force = -engine_force
+		#		else:
+		#			engine_force = 0
+		#		# Brake
+		#		var brake_input = int(input[3])
 		else:
 			steer_target = 0
 			engine_force = 0
@@ -89,24 +89,24 @@ func get_pitch_scale() -> float:
 
 func control_with_mouse():
 	.control_with_mouse()
-	port.close()
+	#port.close()
 
 func control_with_keyboard():
 	.control_with_keyboard()
-	port.close()
+	#port.close()
 
-func control_with_serial_port(port_name):
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	if port_name != null:
-		set_physics_process(false)
-		port.close()
-		port.open(port_name, 2000000, 1000)
-		input_type = InputType.SERIAL_PORT
-		set_physics_process(true)
+#func control_with_serial_port(port_name):
+#	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+#	if port_name != null:
+#		set_physics_process(false)
+#		port.close()
+#		port.open(port_name, 2000000, 1000)
+#		input_type = InputType.SERIAL_PORT
+#		set_physics_process(true)
 
 
-func get_ports():
-	return port.list_ports()
+#func get_ports():
+#	return port.list_ports()
 
 
 func set_engine_force_value(value):

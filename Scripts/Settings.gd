@@ -16,9 +16,9 @@ func _setup():
 	control_device_option_button.add_item("KEYBOARD_KEY", 0)
 	control_device_option_button.add_item("MOUSE_KEY", 1)
 	var vehicle = get_vehicle()
-	if vehicle != null and vehicle is Vehicle:
-		for port_name in vehicle.get_ports():
-			control_device_option_button.add_item(str(port_name))
+	#if vehicle != null and vehicle is Vehicle:
+	#	for port_name in vehicle.get_ports():
+	#		control_device_option_button.add_item(str(port_name))
 	if not Net.is_offline:
 		engine_force_value_spin_box.set_editable(false)
 
