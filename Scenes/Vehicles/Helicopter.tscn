@@ -91,19 +91,31 @@ texture = ExtResource( 4 )
 [node name="EngineSound" parent="VehicleBody" index="6"]
 stream = ExtResource( 6 )
 
-[node name="WindscreenCamera" parent="VehicleBody" index="8"]
+[node name="RightFrontLight" type="SpotLight" parent="VehicleBody" index="8"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.7, 0.75, 1.5 )
+light_energy = 0.0
+spot_range = 20.0
+spot_angle = 20.0
+
+[node name="LeftFrontLight" type="SpotLight" parent="VehicleBody" index="9"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.7, 0.75, 1.5 )
+light_energy = 0.0
+spot_range = 20.0
+spot_angle = 20.0
+
+[node name="WindscreenCamera" parent="VehicleBody" index="10"]
 transform = Transform( -1, -1.51808e-08, 8.60947e-08, 0, 0.984808, 0.173648, -8.74228e-08, 0.173648, -0.984808, 0, 2, 1.5 )
 
-[node name="CenterCamera" parent="VehicleBody" index="9"]
+[node name="CenterCamera" parent="VehicleBody" index="11"]
 transform = Transform( -1, 2.62201e-08, -1.48702e-07, 0, 0.984808, 0.173648, 1.50996e-07, 0.173648, -0.984808, 0, 3, -6 )
 
-[node name="LeftCamera" parent="VehicleBody" index="10"]
+[node name="LeftCamera" parent="VehicleBody" index="12"]
 transform = Transform( -0.939693, -0.0593912, 0.336824, 0, 0.984808, 0.173648, -0.34202, 0.163176, -0.925417, 6, 4, -7 )
 
-[node name="RightCamera" parent="VehicleBody" index="11"]
+[node name="RightCamera" parent="VehicleBody" index="13"]
 transform = Transform( -0.939693, 0.0593912, -0.336824, 0, 0.984808, 0.173648, 0.34202, 0.163176, -0.925417, -6, 4, -7 )
 
-[node name="PreviewCamera" parent="VehicleBody" index="13"]
+[node name="PreviewCamera" parent="VehicleBody" index="15"]
 transform = Transform( 0.707107, -0.241845, 0.664462, 0, 0.939693, 0.34202, -0.707107, -0.241845, 0.664462, 3, 2.25, 3 )
 
 [editable path="VehicleBody/Helicopter"]

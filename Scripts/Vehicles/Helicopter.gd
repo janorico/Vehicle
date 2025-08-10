@@ -83,13 +83,12 @@ remote func change_backward_light_energy(energy: float):
 	$BackwardLight.light_energy = energy
 
 remote func change_light_energy(front_energy: float, back_energy: float):
-	return
 	$LeftFrontLight.light_energy = front_energy
 	$RightFrontLight.light_energy = front_energy
+	return
 	$LeftBackLight.light_energy = back_energy
 	$RightBackLight.light_energy = back_energy
 
 remote func change_light_range(front_range: float):
-	return
 	$LeftFrontLight.spot_range = front_range
 	$RightFrontLight.spot_range = front_range
