@@ -9,6 +9,8 @@ var rotor_velocity: float = 0.0
 onready var rotor = $Helicopter/Rotor
 
 func _ready():
+	if capturing:
+		$XRotation.queue_free()
 	power_min = -2
 	power_max = 10
 
