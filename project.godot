@@ -209,6 +209,11 @@ mouse_helicopter_z_right={
  ]
 }
 
+[layer_names]
+
+3d_physics/layer_1="world"
+3d_physics/layer_2="players"
+
 [locale]
 
 translations=PoolStringArray( "res://Translation/Translation.de.translation", "res://Translation/Translation.en.translation" )
