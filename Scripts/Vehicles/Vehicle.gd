@@ -136,7 +136,6 @@ func process_input(engine_force_input: float, steer_input: float, brake_input: f
 		brake_input = 1.0
 	if brake_input == 0.0:
 		brake = 0.0
-		print(engine_force_input, ";", speed)
 		if abs(speed) > 3 and ((engine_force_input < 0.0 and speed > 0.0) or (engine_force_input > 0.0 and speed < 0.0)):
 			engine_force = 0.0
 			brake = abs(engine_force_input) * brake_value
