@@ -18,6 +18,8 @@ height = 0.04
 
 [node name="VehicleBody" parent="." index="0"]
 script = ExtResource( 2 )
+engine_sound_min_pitch_scale = 0.9
+engine_sound_max_pitch_scale = 1.1
 
 [node name="HornSound" type="AudioStreamPlayer3D" parent="VehicleBody" index="1"]
 stream = ExtResource( 6 )

@@ -1,7 +1,7 @@
 ,en,de
 LIGHT_KEY,Light,Licht
 EXIT_GAME_KEY,Exit game,Spiel beenden
-WELCOME_TO_VEHICLE_KEY,Welcome to Vehicle!,Willkommen bei Vehicle!
+WELCOME_KEY,Welcome to Vehicle!,Willkommen bei Vehicle!
 WINDSCREEN_KEY,Windscreen,Windschutzscheibe
 LEFT_KEY,Left,Links
 RIGHT_KEY,Right,Rechts
@@ -11,8 +11,8 @@ FOLLOW_KEY,Follow,Folgend
 CAR_KEY,Car,Auto
 QUAD_BIKE_KEY,Quad bike,Quad
 TRUCK_KEY,Truck,LKW
-ABOUT_GAME_KEY,About game,Über das Spiel
-ABOUT_GAME_TEXT_KEY,"Vehicle
+ABOUT_KEY,About,Über
+ABOUT_TEXT_KEY,"Vehicle
 
 A Janorico product
 
@@ -49,12 +49,16 @@ KEYBOARD_KEY,Keyboard,Tastatur
 MOUSE_KEY,Mouse,Maus
 CONTROL_DEVICE_KEY,Control device:,Steuerungsgerät:
 MINIBUS_KEY,Minibus,Kleinbus
+PLAY_KEY,Play,Spielen
+SINGLEPLAYER_KEY,Singleplayer,Einzelspieler
 START_SINGLE_PLAYER_GAME_KEY,Start single player game,Einzelspieler-Spiel starten
-HOST_MULTIPLAYER_GAME_KEY,Host multiplayer game,Multiplayer-Spiel hosten
-JOIN_MULTIPLAYER_GAME_KEY,Join multiplayer game,Multiplayer-Spiel beitreten
+P2P_MULTIPLAYER_KEY,P2P multiplayer,P2P-Mehrspieler
+HOST_MULTIPLAYER_GAME_KEY,Host multiplayer game,Mehrspieler-Spiel hosten
+JOIN_MULTIPLAYER_GAME_KEY,Join multiplayer game,Mehrspieler-Spiel beitreten
 SERVER_IP_KEY,Server IP: ,Server-IP: 
+ENTER_SERVER_IP_KEY,Enter server IP...,Server-IP eingeben...
 INVALID_IP_ADDRESS_KEY,Invalid IP address!,Falsche/Ungültige IP-Adresse!
-MAXIMUM_PLAYERS_KEY,Maximum players: ,Maximale Spieler: 
+MAX_PLAYERS_KEY,Max players: ,Maximale Spieler: 
 CONNECTING_TO_SERVER_KEY,Connecting to server...,Mit Server verbinden...
 REAL_WORLD_KEY,Real world,Realistische Welt
 CHANGE_UNIT_KEY,Change unit,Einheit ändern
@@ -62,7 +66,8 @@ SPEED_KEY,Speed,Geschwindigkeit
 HANDBRAKE_KEY,Handbrake,Handbremse
 LARGE_DUMP_TRUCK_KEY,Large dump truck,Großmuldenkipper
 DAY_NIGHT_CYCLE_KEY,Day-night cycle,Tag-Nacht-Zyklus
-YOUR_NAME_KEY,Your name: ,Ihr Name:
+NAME_KEY,Name: ,Name: 
+ENTER_NAME_KEY,Enter name...,Namen eingeben...
 LOADING_KEY,Loading...,Laden...
 PLAY_AGAIN_KEY,Play again,Nochmal spielen
 CONNECTION_SUCCESS_KEY,Connection success,Verbindung erfolgreich
@@ -80,8 +85,6 @@ HIDE_KEY,Hide,Schließen
 CRASHS_REPORTED_KEY,Crashs reported:,Reportierte Crashs:
 CRASH_MONITOR_KEY,Crash monitor:,Auf Crashs überwachen:
 CAR_LEGACY_KEY,Car (Legacy),Auto (Legacy)
-UPDATE_AVAILABLE_KEY,Update available,Update verfügbar
-UPDATE_AVAILABLE_TEXT_KEY,An update is available. Do you want to update now?,Ein Update ist verfügbar. Wollen sie jetzt updaten?
 POWER_KEY,Power,Kraft
 BRAKE_KEY,Brake,Bemse
 PORT_KEY,Port: ,Port: 
@@ -89,3 +92,5 @@ HELICOPTER_KEY,Helicopter,Helikopter
 DUMP_TRUCK_KEY,Dump truck,Kipper
 DOWNLOADING_UPDATE_KEY,Downloading update...,Update herunterladen...
 MINI_SNOWPLOW_KEY,Mini Snowplow,Mini-Schneeplug
+UPDATE_CHECK_FAILED_KEY,Update check failed {when} with code {code}.,Update-Check Fehlgeschlagen {when} mit Code {code}.
+UP_TO_DATE_KEY,Up to date.,Kein Update verfügbar.

@@ -1,6 +1,6 @@
 extends CenterContainer
 
-const STARTUP_SCENE = preload("res://Scenes/Startup.tscn")
+const MAIN_MENU_SCENE = preload("res://Scenes/MainMenu.tscn")
 const MAIN_SCENE = preload("res://Scenes/Main.tscn")
 
 func _ready():
@@ -50,4 +50,4 @@ func change_scene(scene: PackedScene):
 	queue_free()
 
 func _play_again():
-	change_scene(STARTUP_SCENE)
+	change_scene(MAIN_MENU_SCENE)

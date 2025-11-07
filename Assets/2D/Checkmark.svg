@@ -1,0 +1,6 @@
+<svg width="64" height="64" viewBox="0 -960 960 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- https://fonts.google.com/icons?icon.size=48&icon.color=%23FFFFFF&icon.style=Sharp&selected=Material+Symbols+Sharp:check:FILL@0;wght@400;GRAD@0;opsz@48&icon.query=check -->
+    <path fill="white" d="M378-246 154-470l43-43 181 181 384-384 43 43-427 427Z"/>
+
+    <circle r="480" cx="480" cy="-480" fill="white" opacity=".5"/>
+</svg>

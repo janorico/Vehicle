@@ -47,8 +47,8 @@ func _physics_process(delta):
 					power += (power_step * delta)
 				if Input.is_action_pressed("mouse_accelerate_back"):
 					power -= (power_step * delta)
-		power = clamp(power, power_min, power_max)
-		$XRotation/Arrow.rect_rotation = (rotation_degrees.x * -1)
+			power = clamp(power, power_min, power_max)
+			$XRotation/Arrow.rect_rotation = (rotation_degrees.x * -1)
 		if not Net.is_offline:
 			rpc("update_helicopter", power, rotation_x_target, steer_target, rotation_z_target, rotor.rotation_degrees.y, rotor_velocity)
 

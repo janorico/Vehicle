@@ -7,7 +7,7 @@ func _ready():
 		yield(Global, "setted_up")
 	if Net.is_offline:
 		$Control/VBoxContainer/SendMessageButton.disabled = true
-	var world = load(Global.get_world_path()).instance()
+	var world = load(Global.worlds[Global.world].scene_path).instance()
 	add_child(world)
 	if Net.is_offline:
 		$Vehicles.add_child(load_player(Net.my_info))
@@ -52,10 +52,10 @@ func create_my_player():
 	p.get_child(0).initialize(Net.net_id)
 
 func load_player(info: Dictionary):
-	var vehicle = load(Global.get_vehicle_path(info["vehicle"])).instance()
+	var vehicle = load(Global.vehicles[info["vehicle"]]["path"]).instance()
 	for child in vehicle.get_children():
-		child.translation.y += Global.get_vehicle_start_y_translation()
-		child.rotation_degrees.y += Global.get_vehicle_start_y_rotation()
+		child.translation.y += Global.worlds[Global.world].vehicle_start.y_translation
+		child.rotation_degrees.y += Global.worlds[Global.world].vehicle_start.y_rotation
 	return vehicle
 
 remote func _update_day_night():

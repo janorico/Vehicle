@@ -10,8 +10,8 @@ var center_y: float
 
 
 func _initialize():
-	map_texture = load(Global.get_map_path())
-	map_divider = Global.get_map_divider()
+	map_texture = load(Global.worlds[Global.world].map_path)
+	map_divider = Global.worlds[Global.world].map_divider
 	map_size = map_texture.get_size()
 	center_x = (map_size.x / 2)
 	center_y = ((map_size.y / 2))

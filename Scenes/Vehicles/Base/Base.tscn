@@ -33,6 +33,7 @@ far = 10000.0
 
 [node name="CenterCamera" type="ClippedCamera" parent="VehicleBody"]
 transform = Transform( -1, 2.62201e-08, -1.48702e-07, 0, 0.984808, 0.173648, 1.50996e-07, 0.173648, -0.984808, 0, 3, -5 )
+current = true
 far = 10000.0
 
 [node name="LeftCamera" type="Camera" parent="VehicleBody"]

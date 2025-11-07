@@ -10,7 +10,7 @@ export var engine_sound_max_pitch_scale := 1.1
 
 
 func _ready():
-	if OS.is_debug_build() and capturing:
+	if capturing:
 		$Smoke.emitting = false
 		$LeftMirror.queue_free()
 		$RightMirror.queue_free()

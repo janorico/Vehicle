@@ -43,7 +43,7 @@ export(float) var brake_value := 1.0
 var input_type = InputType.KEYBOARD
 var enabled: bool = true
 # Only for capturing
-export var capturing := false
+var capturing := false
 # Other
 var local_velocity := Vector3.ZERO
 
@@ -51,19 +51,10 @@ func _ready():
 	if Net.is_offline:
 		camera = Global.last_used_view
 		update_camera()
-	if OS.is_debug_build() and capturing:
-		sleeping = true
-		translation = start_translation
-		rotation = start_rotation
-		$PreviewCamera.make_current()
-		$Smoke.emitting = false
-		yield(get_tree(), "idle_frame")
-		yield(get_tree(), "idle_frame")
-		var image = get_viewport().get_texture().get_data()
-		image.flip_y()
-		image.save_png("res://capture.png")
-	else:
-		$PreviewCamera.queue_free()
+	if capturing:
+		$EngineSound.stop()
+		enabled = false
+		mode = RigidBody.MODE_STATIC
 
 func _physics_process(_delta):
 	$EngineSound.pitch_scale = get_pitch_scale()

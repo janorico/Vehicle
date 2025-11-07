@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="GarageCeilingLight" type="OmniLight"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.8, 0 )
+light_energy = 0.5
+shadow_enabled = true
+omni_range = 10.0
