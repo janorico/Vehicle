@@ -665,7 +665,7 @@ value = 20.0
 [connection signal="pressed" from="Control/VBoxContainer/Light/HBoxContainer/LowBeam" to="Control/VBoxContainer/Light/RotarySwitch" method="_low_beam"]
 [connection signal="pressed" from="Control/VBoxContainer/Light/HBoxContainer/HighBeam" to="Vehicles" method="_high_beam"]
 [connection signal="pressed" from="Control/VBoxContainer/Light/HBoxContainer/HighBeam" to="Control/VBoxContainer/Light/RotarySwitch" method="_high_beam"]
-[connection signal="resized" from="Control/VBoxContainer/Light/RotarySwitch" to="Control/VBoxContainer/Light/RotarySwitch" method="_update_pivoit_offset"]
+[connection signal="resized" from="Control/VBoxContainer/Light/RotarySwitch" to="Control/VBoxContainer/Light/RotarySwitch" method="_update_pivot_offset"]
 [connection signal="resized" from="Control/VBoxContainer/Compass" to="Control/VBoxContainer/Compass" method="_update_pivoit_offset"]
 [connection signal="resized" from="Control/VBoxContainer/SteeringWheel" to="Control/VBoxContainer/SteeringWheel" method="_update_pivoit_offset"]
 [connection signal="pressed" from="Control/DashboardPanel/Dashboard/Items/Speedometer/Button" to="Control/DashboardPanel/Dashboard" method="_change_speed_unit"]

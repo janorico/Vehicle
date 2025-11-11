@@ -17,5 +17,5 @@ func _low_beam():
 func _high_beam():
 	set_rotation_degrees(40)
 
-func _update_pivoit_offset():
+func _update_pivot_offset():
 	set_pivot_offset(Vector2(rect_size.x / 2, rect_size.y / 2))
