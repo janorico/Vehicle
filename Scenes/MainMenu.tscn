@@ -153,7 +153,7 @@ scroll_vertical_enabled = false
 script = ExtResource( 10 )
 
 [node name="Actions" type="HBoxContainer" parent="Container"]
-margin_left = 875.0
+margin_left = 847.0
 margin_top = 532.0
 margin_right = 1136.0
 margin_bottom = 632.0
@@ -162,14 +162,14 @@ size_flags_vertical = 8
 
 [node name="OptionsButton" type="Button" parent="Container/Actions"]
 margin_top = 75.0
-margin_right = 57.0
+margin_right = 85.0
 margin_bottom = 100.0
 size_flags_vertical = 8
-text = "Options"
+text = "OPTIONS_KEY"
 
 [node name="PlayButton" type="MenuButton" parent="Container/Actions"]
-margin_left = 61.0
-margin_right = 261.0
+margin_left = 89.0
+margin_right = 289.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 200, 100 )
 custom_fonts/font = SubResource( 1 )

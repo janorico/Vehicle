@@ -49,6 +49,7 @@ KEYBOARD_KEY,Keyboard,Tastatur
 MOUSE_KEY,Mouse,Maus
 CONTROL_DEVICE_KEY,Control device:,Steuerungsgerät:
 MINIBUS_KEY,Minibus,Kleinbus
+OPTIONS_KEY,Options,Optionen
 PLAY_KEY,Play,Spielen
 SINGLEPLAYER_KEY,Singleplayer,Einzelspieler
 START_SINGLE_PLAYER_GAME_KEY,Start single player game,Einzelspieler-Spiel starten
