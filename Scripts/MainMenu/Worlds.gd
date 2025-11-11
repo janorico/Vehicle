@@ -2,6 +2,7 @@ extends Control
 
 var selected_world := 0 setget ,_get_selected_world
 var _bg = ButtonGroup.new()
+var _buttons = []
 
 
 func init_buttons() -> void:
@@ -16,8 +17,9 @@ func init_buttons() -> void:
 		b.hint_tooltip = wd.name
 		b.group = _bg
 		add_child(b)
+		_buttons.append(b)
 		i += 1
 
 
 func _get_selected_world() -> int:
-	return _bg.get_buttons().find(_bg.get_pressed_button())
+	return _buttons.find(_bg.get_pressed_button())
