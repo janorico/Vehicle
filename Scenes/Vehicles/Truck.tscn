@@ -1,39 +1,37 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/Vehicles/Base/Vehicle.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Vehicles/Base/Wheel.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Vehicles/Wheel_0.25_0.2.tres" type="CylinderMesh" id=3]
 [ext_resource path="res://Assets/Sounds/TruckEngineLoop.wav" type="AudioStream" id=4]
+[ext_resource path="res://Assets/Vehicles/Truck/Truck.obj" type="ArrayMesh" id=5]
 
-[sub_resource type="CubeMesh" id=1]
-size = Vector3( 2, 1, 1 )
+[sub_resource type="SpatialMaterial" id=1]
+resource_name = "Metal"
+albedo_color = Color( 1, 0.3, 0, 1 )
+metallic = 1.0
+roughness = 0.5
 
-[sub_resource type="CubeMesh" id=2]
-size = Vector3( 0.1, 0.5, 3 )
-
-[sub_resource type="CubeMesh" id=9]
-size = Vector3( 1.8, 0.5, 0.1 )
-
-[sub_resource type="CubeMesh" id=3]
-size = Vector3( 2, 0.1, 3 )
-
-[sub_resource type="CubeMesh" id=4]
-size = Vector3( 1.5, 0.35, 4 )
-
-[sub_resource type="BoxShape" id=8]
-extents = Vector3( 0.05, 0.25, 1.5 )
-
-[sub_resource type="BoxShape" id=10]
-extents = Vector3( 0.9, 0.25, 0.05 )
+[sub_resource type="SpatialMaterial" id=2]
+resource_name = "Glass"
+flags_transparent = true
+albedo_color = Color( 1, 1, 1, 0.5 )
+metallic = 0.8
+roughness = 0.2
 
 [sub_resource type="BoxShape" id=5]
-extents = Vector3( 1, 0.5, 0.5 )
+extents = Vector3( 1, 0.775, 0.5 )
 
 [sub_resource type="BoxShape" id=6]
-extents = Vector3( 1, 0.05, 1.5 )
+extents = Vector3( 1, 0.175, 1.5 )
 
-[sub_resource type="BoxShape" id=7]
-extents = Vector3( 0.75, 0.175, 1.5 )
+[sub_resource type="BoxShape" id=3]
+resource_name = "ShapeBedSide"
+extents = Vector3( 0.01, 0.3, 1.5 )
+
+[sub_resource type="BoxShape" id=4]
+resource_name = "ShapeBack"
+extents = Vector3( 1, 0.3, 0.01 )
 
 [node name="Spatial" instance=ExtResource( 1 )]
 
@@ -41,114 +39,119 @@ extents = Vector3( 0.75, 0.175, 1.5 )
 stream = ExtResource( 4 )
 
 [node name="NameLabel3D" parent="VehicleBody" index="3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1, 0.5 )
 
 [node name="WindscreenCamera" parent="VehicleBody" index="4"]
-transform = Transform( -1, -1.51808e-08, 8.60946e-08, 0, 0.984808, 0.173648, -8.74228e-08, 0.173648, -0.984808, 0, 1.5, 1 )
+transform = Transform( -1, -1.51808e-08, 8.60947e-08, 0, 0.984808, 0.173648, -8.74228e-08, 0.173648, -0.984808, 0, 1.5, 1.5 )
 
 [node name="CenterCamera" parent="VehicleBody" index="5"]
-transform = Transform( -1, 2.62201e-08, -1.48702e-07, 0, 0.984808, 0.173648, 1.50996e-07, 0.173648, -0.984808, 0, 3, -6 )
+transform = Transform( -1, 2.62201e-08, -1.48702e-07, 0, 0.984808, 0.173648, 1.50996e-07, 0.173648, -0.984808, 0, 3, -5.5 )
+
+[node name="LeftCamera" parent="VehicleBody" index="6"]
+transform = Transform( -0.939693, -0.0593911, 0.336824, 0, 0.984808, 0.173648, -0.34202, 0.163176, -0.925417, 7, 4, -4.5 )
+
+[node name="RightCamera" parent="VehicleBody" index="7"]
+transform = Transform( -0.939693, 0.0593911, -0.336824, 0, 0.984808, 0.173648, 0.34202, 0.163176, -0.925417, -7, 4, -4.5 )
 
 [node name="LeftMirrorPlaceHolder" parent="VehicleBody" index="8"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 1.25, 1.4 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 1.25, 1.9 )
 
 [node name="RightMirrorPlaceHolder" parent="VehicleBody" index="9"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 1.25, 1.4 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 1.25, 1.9 )
 
 [node name="Camera" parent="VehicleBody/LeftMirror/Viewport" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 1.25, 1.4 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 1.25, 1.9 )
 
 [node name="Camera" parent="VehicleBody/RightMirror/Viewport" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 1.25, 1.4 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 1.25, 1.9 )
 
-[node name="Body" type="Spatial" parent="VehicleBody" index="12"]
+[node name="Body" type="MeshInstance" parent="VehicleBody" index="12"]
+mesh = ExtResource( 5 )
+material/0 = SubResource( 1 )
+material/1 = SubResource( 2 )
 
-[node name="Cockpit" type="MeshInstance" parent="VehicleBody/Body" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 1 )
-mesh = SubResource( 1 )
-
-[node name="MeshInstance" type="MeshInstance" parent="VehicleBody/Body" index="1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.95, 0.95, -1 )
-mesh = SubResource( 2 )
-
-[node name="MeshInstance2" type="MeshInstance" parent="VehicleBody/Body" index="2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.95, 0.95, -1 )
-mesh = SubResource( 2 )
-
-[node name="MeshInstance3" type="MeshInstance" parent="VehicleBody/Body" index="3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95, -2.45 )
-mesh = SubResource( 9 )
-
-[node name="Center" type="MeshInstance" parent="VehicleBody/Body" index="4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, -1 )
-mesh = SubResource( 3 )
-
-[node name="Lower" type="MeshInstance" parent="VehicleBody/Body" index="5"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.425, -0.5 )
-mesh = SubResource( 4 )
-
-[node name="CollisionShape" type="CollisionShape" parent="VehicleBody" index="13"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.95, 0.95, -1 )
-shape = SubResource( 8 )
-
-[node name="CollisionShape2" type="CollisionShape" parent="VehicleBody" index="14"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.95, 0.95, -1 )
-shape = SubResource( 8 )
-
-[node name="CollisionShape3" type="CollisionShape" parent="VehicleBody" index="15"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95, -2.45 )
-shape = SubResource( 10 )
-
-[node name="Cockpit" type="CollisionShape" parent="VehicleBody" index="16"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 1 )
+[node name="ColCabin" type="CollisionShape" parent="VehicleBody" index="13"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.025, 1.5 )
 shape = SubResource( 5 )
 
-[node name="CenterCollisionShape" type="CollisionShape" parent="VehicleBody" index="17"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, -1 )
+[node name="ColBedGround" type="CollisionShape" parent="VehicleBody" index="14"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.425, -0.5 )
 shape = SubResource( 6 )
 
-[node name="LowerCollisionShape" type="CollisionShape" parent="VehicleBody" index="18"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.425, 0 )
-shape = SubResource( 7 )
+[node name="ColBedSideLeft" type="CollisionShape" parent="VehicleBody" index="15"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.99, 0.9, -0.5 )
+shape = SubResource( 3 )
 
-[node name="Smoke" parent="VehicleBody" index="19"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.4, -2.6 )
+[node name="ColBedSideRight" type="CollisionShape" parent="VehicleBody" index="16"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.99, 0.9, -0.5 )
+shape = SubResource( 3 )
 
-[node name="BackwardLight" parent="VehicleBody" index="20"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, -2.5 )
+[node name="ColBedBack" type="CollisionShape" parent="VehicleBody" index="17"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, -1.99 )
+shape = SubResource( 4 )
 
-[node name="RightBackLight" parent="VehicleBody" index="22"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0.65, -2.5 )
+[node name="Smoke" parent="VehicleBody" index="18"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.4, -2.1 )
 
-[node name="LeftBackLight" parent="VehicleBody" index="23"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 0.65, -2.5 )
+[node name="BackwardLight" parent="VehicleBody" index="19"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, -2 )
+
+[node name="RightFrontLight" parent="VehicleBody" index="20"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.7, 0.75, 2 )
+
+[node name="RightBackLight" parent="VehicleBody" index="21"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0.65, -2 )
+
+[node name="LeftBackLight" parent="VehicleBody" index="22"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 0.65, -2 )
+
+[node name="LeftFrontLight" parent="VehicleBody" index="23"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.7, 0.75, 2 )
+
+[node name="LeftFrontWheel" parent="VehicleBody" index="24"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0.25, 1.5 )
 
 [node name="Wheel" parent="VehicleBody/LeftFrontWheel" index="0"]
 mesh = ExtResource( 3 )
 
-[node name="LeftBackWheel2" parent="VehicleBody" index="26" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0.25, -1.6 )
+[node name="LeftBackWheel2" parent="VehicleBody" index="25" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0.25, -1.1 )
 
 [node name="Wheel" parent="VehicleBody/LeftBackWheel2" index="0"]
 mesh = ExtResource( 3 )
 
+[node name="LeftBackWheel" parent="VehicleBody" index="26"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0.25, -0.5 )
+
 [node name="Wheel" parent="VehicleBody/LeftBackWheel" index="0"]
 mesh = ExtResource( 3 )
+
+[node name="RightFrontWheel" parent="VehicleBody" index="27"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0.25, 1.5 )
 
 [node name="Wheel" parent="VehicleBody/RightFrontWheel" index="0"]
 mesh = ExtResource( 3 )
 
-[node name="RightBackWheel2" parent="VehicleBody" index="29" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0.25, -1.6 )
+[node name="RightBackWheel2" parent="VehicleBody" index="28" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0.25, -1.1 )
 
 [node name="Wheel" parent="VehicleBody/RightBackWheel2" index="0"]
 mesh = ExtResource( 3 )
 
+[node name="RightBackWheel" parent="VehicleBody" index="29"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0.25, -0.5 )
+
 [node name="Wheel" parent="VehicleBody/RightBackWheel" index="0"]
 mesh = ExtResource( 3 )
 
-[node name="PreviewCamera" parent="VehicleBody" index="32"]
-transform = Transform( 0.707107, -0.122788, 0.696364, 0, 0.984808, 0.173648, -0.707107, -0.122788, 0.696364, 2, 1.2, 2.2 )
+[node name="FollowCamera" parent="VehicleBody" index="30"]
+transform = Transform( -0.707107, -0.122788, 0.696364, 0, 0.984808, 0.173648, -0.707107, 0.122788, -0.696364, 2, 1, -1.5 )
+
+[node name="PreviewCamera" parent="VehicleBody" index="31"]
+transform = Transform( 0.707107, -0.122788, 0.696364, 0, 0.984808, 0.173648, -0.707107, -0.122788, 0.696364, 2, 1.2, 2.7 )
+
+[node name="InterpolatedCamera" parent="." index="1"]
+transform = Transform( -0.707107, -0.122788, 0.696364, 0, 0.984808, 0.173648, -0.707107, 0.122788, -0.696364, 2, 1, -1.5 )
 
 [editable path="VehicleBody/LeftFrontWheel"]
 [editable path="VehicleBody/LeftBackWheel2"]
