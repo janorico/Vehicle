@@ -225,7 +225,7 @@ window_title = "OPTIONS_KEY"
 margin_left = 8.0
 margin_top = 8.0
 margin_right = 255.0
-margin_bottom = 237.0
+margin_bottom = 302.0
 columns = 2
 
 [node name="MPLabel" type="Label" parent="OptionsDialog/GridContainer"]
@@ -306,6 +306,32 @@ margin_left = 137.0
 margin_top = 140.0
 margin_right = 247.0
 margin_bottom = 157.0
+
+[node name="AALabel" type="Label" parent="OptionsDialog/GridContainer"]
+margin_top = 168.0
+margin_right = 133.0
+margin_bottom = 185.0
+text = "AA_KEY"
+
+[node name="AACheckButton" type="CheckButton" parent="OptionsDialog/GridContainer"]
+margin_left = 137.0
+margin_top = 161.0
+margin_right = 201.0
+margin_bottom = 193.0
+size_flags_horizontal = 0
+
+[node name="ShadowsLabel" type="Label" parent="OptionsDialog/GridContainer"]
+margin_top = 168.0
+margin_right = 133.0
+margin_bottom = 185.0
+text = "SHADOWS_KEY"
+
+[node name="ShadowsCheckButton" type="CheckButton" parent="OptionsDialog/GridContainer"]
+margin_left = 137.0
+margin_top = 161.0
+margin_right = 201.0
+margin_bottom = 193.0
+size_flags_horizontal = 0
 
 [node name="TonemapLabel" type="Label" parent="OptionsDialog/GridContainer"]
 margin_top = 201.0

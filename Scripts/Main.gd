@@ -5,6 +5,10 @@ signal setup_ready
 func _ready():
 	if not Global.setted_up_bool and not Net.is_offline and not Net.is_host:
 		yield(Global, "setted_up")
+	# Apply settings
+	$Sun.shadow_enabled = Global.graphics_shadows
+	get_viewport().fxaa = Global.graphics_aa
+	# Setup
 	if Net.is_offline:
 		$Control/VBoxContainer/SendMessageButton.disabled = true
 	var world = load(Global.worlds[Global.world].scene_path).instance()

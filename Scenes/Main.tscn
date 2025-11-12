@@ -98,7 +98,6 @@ handbrake_button = NodePath("../Control/VBoxContainer/HandbrakeButton")
 
 [node name="Sun" type="DirectionalLight" parent="."]
 transform = Transform( -1, 7.57104e-08, -4.37114e-08, 0, 0.5, 0.866026, 8.74228e-08, 0.866026, -0.5, 0, 0, 0 )
-shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 10 )
@@ -600,9 +599,9 @@ margin_bottom = 16.0
 min_value = 1.0
 value = 20.0
 
+[connection signal="setup_ready" from="." to="Control/DebugInfoPanel" method="set_vehicle"]
 [connection signal="setup_ready" from="." to="Control/VBoxContainer/Map" method="_initialize"]
 [connection signal="setup_ready" from="." to="Control/SettingsDialog" method="_setup"]
-[connection signal="setup_ready" from="." to="Control/DebugInfoPanel" method="set_vehicle"]
 [connection signal="item_selected" from="Control/VBoxContainer/ViewOptionButton" to="Vehicles" method="_set_view"]
 [connection signal="toggled" from="Control/VBoxContainer/HandbrakeButton" to="Vehicles" method="_handbreak_button_toggled"]
 [connection signal="pressed" from="Control/VBoxContainer/SettingsButton" to="Control/SettingsDialog" method="popup_centered"]
