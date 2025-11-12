@@ -1,4 +1,18 @@
 ,en,de
+OPTIONS_KEY,Options,Optionen
+MULTIPLAYER_KEY,Multiplayer,Mehrspieler
+PORT_KEY,Port: ,Port: 
+MAX_PLAYERS_KEY,Max players: ,Maximale Spieler: 
+GAME_KEY,Game,Spiel
+DAY_NIGHT_CYCLE_KEY,Day-night cycle: ,Tag-Nacht-Zyklus: 
+GRAPHICS_KEY,Graphics,Grafik
+GLOW_KEY,Glow: ,Leuchten: 
+TONEMAP_KEY,Tonemap: ,Farben: 
+TONEMAP_LINEAR_KEY,Linear,Linear
+TONEMAP_REINHARDT_KEY,Reinhardt,Reinhardt
+TONEMAP_FILMIC_KEY,Filmic,Filmisch
+TONEMAP_ACES_KEY,ACES,ACES
+TONEMAP_ACES_FITTED_KEY,ACES,ACES angepasst
 LIGHT_KEY,Light,Licht
 EXIT_GAME_KEY,Exit game,Spiel beenden
 WELCOME_KEY,Welcome to Vehicle!,Willkommen bei Vehicle!
@@ -49,7 +63,6 @@ KEYBOARD_KEY,Keyboard,Tastatur
 MOUSE_KEY,Mouse,Maus
 CONTROL_DEVICE_KEY,Control device:,Steuerungsgerät:
 MINIBUS_KEY,Minibus,Kleinbus
-OPTIONS_KEY,Options,Optionen
 PLAY_KEY,Play,Spielen
 SINGLEPLAYER_KEY,Singleplayer,Einzelspieler
 START_SINGLE_PLAYER_GAME_KEY,Start single player game,Einzelspieler-Spiel starten
@@ -59,14 +72,12 @@ JOIN_MULTIPLAYER_GAME_KEY,Join multiplayer game,Mehrspieler-Spiel beitreten
 SERVER_IP_KEY,Server IP: ,Server-IP: 
 ENTER_SERVER_IP_KEY,Enter server IP...,Server-IP eingeben...
 INVALID_IP_ADDRESS_KEY,Invalid IP address!,Falsche/Ungültige IP-Adresse!
-MAX_PLAYERS_KEY,Max players: ,Maximale Spieler: 
 CONNECTING_TO_SERVER_KEY,Connecting to server...,Mit Server verbinden...
 REAL_WORLD_KEY,Real world,Realistische Welt
 CHANGE_UNIT_KEY,Change unit,Einheit ändern
 SPEED_KEY,Speed,Geschwindigkeit
 HANDBRAKE_KEY,Handbrake,Handbremse
 LARGE_DUMP_TRUCK_KEY,Large dump truck,Großmuldenkipper
-DAY_NIGHT_CYCLE_KEY,Day-night cycle,Tag-Nacht-Zyklus
 NAME_KEY,Name: ,Name: 
 ENTER_NAME_KEY,Enter name...,Namen eingeben...
 LOADING_KEY,Loading...,Laden...
@@ -88,7 +99,6 @@ CRASH_MONITOR_KEY,Crash monitor:,Auf Crashs überwachen:
 CAR_LEGACY_KEY,Car (Legacy),Auto (Legacy)
 POWER_KEY,Power,Kraft
 BRAKE_KEY,Brake,Bemse
-PORT_KEY,Port: ,Port: 
 HELICOPTER_KEY,Helicopter,Helikopter
 DUMP_TRUCK_KEY,Dump truck,Kipper
 DOWNLOADING_UPDATE_KEY,Downloading update...,Update herunterladen...

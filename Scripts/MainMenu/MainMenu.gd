@@ -13,6 +13,8 @@ onready var server_ip_line_edit = $Container/VBoxContainer/PanelContainer/Option
 onready var port_spin_box = $OptionsDialog/GridContainer/PortSpinBox
 onready var max_players_spin_box = $OptionsDialog/GridContainer/MaxPlayersSpinBox
 onready var day_night_cycle_toggle = $OptionsDialog/GridContainer/DayNightCycleCheckButton
+onready var tonemap_option_button = $OptionsDialog/GridContainer/TonemapOptionButton
+onready var glow_toggle = $OptionsDialog/GridContainer/GlowCheckButton
 
 
 func _ready() -> void:
@@ -26,6 +28,8 @@ func _ready() -> void:
 	port_spin_box.value = Global.last_port
 	max_players_spin_box.value = Global.last_max_players
 	day_night_cycle_toggle.pressed = Global.last_day_night_cycle
+	tonemap_option_button.selected = Global.graphics_tonemap
+	glow_toggle.pressed = Global.graphics_glow
 	# Connect buttons
 	$Container/System/InfoButton.get_popup().connect("id_pressed", self, "_on_info_button_pressed")
 	$Container/Actions/PlayButton.get_popup().connect("id_pressed", self, "_on_play_button_item_pressed")
@@ -41,6 +45,8 @@ func _exit_tree() -> void:
 	Global.last_port = port_spin_box.value
 	Global.last_max_players = max_players_spin_box.value
 	Global.last_day_night_cycle = day_night_cycle_toggle.pressed
+	Global.graphics_tonemap = tonemap_option_button.selected
+	Global.graphics_glow = glow_toggle.pressed
 	Global.save_last_states()
 
 

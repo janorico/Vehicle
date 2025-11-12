@@ -85,6 +85,8 @@ const LAST_PORT_KEY = "last_port"
 const LAST_MAX_PLAYERS_KEY = "last_max_players"
 const LAST_DAY_NIGTH_CYCLE = "last_day_night_cycle"
 const LAST_USED_VIEW_KEY = "last_used_view"
+const GRAPHICS_TONEMAP_KEY = "graphics_tonemap"
+const GRAPHICS_GLOW_KEY = "graphics_glow"
 # Values
 var window_state := "fullscreen"
 var last_vehicle := 0
@@ -95,6 +97,8 @@ var last_port := 31400
 var last_max_players := 20
 var last_day_night_cycle := false
 var last_used_view = VehicleBase.CameraType.WINDSCREEN
+var graphics_tonemap := 4
+var graphics_glow := false
 # Setup
 var setted_up_bool := false
 var day_night_cycle := true
@@ -148,6 +152,8 @@ func load_last_states():
 		if data.has(LAST_MAX_PLAYERS_KEY):		 last_max_players = data[LAST_MAX_PLAYERS_KEY]
 		if data.has(LAST_DAY_NIGTH_CYCLE):		 last_day_night_cycle = data[LAST_DAY_NIGTH_CYCLE]
 		if data.has(LAST_USED_VIEW_KEY):		 last_used_view = data[LAST_USED_VIEW_KEY]
+		if data.has(GRAPHICS_TONEMAP_KEY):		 graphics_tonemap = data[GRAPHICS_TONEMAP_KEY]
+		if data.has(GRAPHICS_GLOW_KEY):			 graphics_glow = data[GRAPHICS_GLOW_KEY]
 	set_window_state()
 
 func set_window_state():
@@ -188,7 +194,9 @@ func save_last_states():
 		LAST_PORT_KEY: last_port,
 		LAST_MAX_PLAYERS_KEY: last_max_players,
 		LAST_DAY_NIGTH_CYCLE: last_day_night_cycle,
-		LAST_USED_VIEW_KEY: last_used_view
+		LAST_USED_VIEW_KEY: last_used_view,
+		GRAPHICS_TONEMAP_KEY: graphics_tonemap,
+		GRAPHICS_GLOW_KEY: graphics_glow,
 	}
 	file.store_line(to_json(json_data))
 	file.close()
