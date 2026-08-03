@@ -233,6 +233,7 @@ common/enable_pause_aware_picking=true
 [rendering]
 
 quality/driver/fallback_to_gles2=true
+gles3/shaders/shader_compilation_mode=2
 environment/default_clear_color=Color( 0, 0, 0, 1 )
 quality/filters/use_fxaa=true
 environment/default_environment="res://default_env.tres"
