@@ -5,6 +5,7 @@ var backward_light_on := false
 #const SERCOMM = preload("res://bin/GDsercomm.gdns")
 #onready var port = SERCOMM.new()
 onready var horn_sound: AudioStreamPlayer3D = $HornSound
+export var powered_wheels := 4
 export var engine_sound_min_pitch_scale := 0.9
 export var engine_sound_max_pitch_scale := 1.1
 
@@ -110,6 +111,7 @@ func control_with_keyboard():
 
 
 func set_engine_force_value(value):
+	value = value / (powered_wheels / 4.0)
 	.set_engine_force_value(value)
 	power_max = engine_force_value * 2.5
 	power_min = -power_max

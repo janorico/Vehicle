@@ -35,6 +35,9 @@ extents = Vector3( 1, 0.3, 0.01 )
 
 [node name="Spatial" instance=ExtResource( 1 )]
 
+[node name="VehicleBody" parent="." index="0"]
+powered_wheels = 6
+
 [node name="EngineSound" parent="VehicleBody" index="2"]
 stream = ExtResource( 4 )
 

@@ -117,6 +117,7 @@ tracks/3/keys = PoolRealArray( 0, 1, 0, 1.96418, -4.14907, 0.258819, 0, 0, 0.965
 
 [node name="VehicleBody" parent="." index="0"]
 script = ExtResource( 1 )
+powered_wheels = 6
 
 [node name="DumpTruck" parent="VehicleBody" index="0" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0 )
