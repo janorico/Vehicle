@@ -23,7 +23,9 @@ func set_content_text(new_content_text):
 	update_text()
 
 func update_rotation():
-	$ColorRect.rect_rotation = range_lerp(value, minimum, maximum, -90, 90)
+	if minimum >= 0:
+		value = abs(value)
+	$ColorRect.rect_rotation = clamp(range_lerp(value, minimum, maximum, -90, 90), -90, 90)
 
 func update_text():
 	text = title
