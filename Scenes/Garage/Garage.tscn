@@ -20,6 +20,7 @@ surfaces/0 = {
 }
 
 [node name="Garage" instance=ExtResource( 1 )]
+transform = Transform( -1.09278e-08, 0, -0.25, 0, 0.25, 0, 0.25, 0, -1.09278e-08, 0, 1.87, 0 )
 
 [node name="Plane" parent="." index="14"]
 transform = Transform( -69.1323, 0, 0, 0, 33.9305, -3.66367e-06, 0, 2.9663e-06, 41.9075, -0.314976, -7.45036, 0.3839 )

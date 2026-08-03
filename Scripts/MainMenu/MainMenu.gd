@@ -39,6 +39,9 @@ func _ready() -> void:
 	$Container/Actions/PlayButton.get_popup().connect("id_pressed", self, "_on_play_button_item_pressed")
 	# Update camera
 	$Environment/Camera.make_current()
+	# Garage
+	var garage = load("res://Scenes/Garage/Garage.tscn").instance()
+	$Environment.add_child(garage)
 
 
 func _exit_tree() -> void:
