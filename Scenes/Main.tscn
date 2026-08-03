@@ -354,6 +354,18 @@ margin_right = 412.0
 margin_bottom = 134.0
 title = "POWER_KEY"
 
+[node name="PointerTarget" type="ColorRect" parent="Control/DashboardPanel/Dashboard/Items/Power"]
+show_behind_parent = true
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -3.0
+margin_top = 44.0
+margin_right = 3.0
+margin_bottom = 114.0
+rect_rotation = -90.0
+rect_pivot_offset = Vector2( 3, 70 )
+color = Color( 0.5, 0.5, 0.5, 1 )
+
 [node name="HSeparator" type="HSeparator" parent="Control/DashboardPanel/Dashboard"]
 margin_top = 138.0
 margin_right = 412.0

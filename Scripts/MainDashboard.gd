@@ -7,27 +7,34 @@ enum SpeedUnit {
 }
 
 export(SpeedUnit) var speed_unit := SpeedUnit.KILOMETERS_PER_HOUR
-var speed = 0
-var power = 0
 
 func _process(_delta):
 	var vehicle = get_vehicle()
 	if vehicle != null:
 		# Speed
-		speed = vehicle.local_velocity.z
+		var velocity = vehicle.local_velocity
+		var unit_suffix: String
 		match speed_unit:
-			SpeedUnit.METERS_PER_SECOND: $Items/Speedometer.content_text = "%.1f m/s" % speed
+			SpeedUnit.METERS_PER_SECOND:
+				unit_suffix = "m/s"
 			SpeedUnit.KILOMETERS_PER_HOUR:
-				speed *= 3.6
-				$Items/Speedometer.content_text = "%.0f km/h" % speed
+				unit_suffix = "km/h"
+				velocity *= 3.6
 			SpeedUnit.MILES_PER_HOUR:
-				speed *= 2.23694
-				$Items/Speedometer.content_text = "%.0f mph" % speed
-		$Items/Speedometer.value = speed
+				unit_suffix = "mph"
+				velocity *= 2.23694
+		var item_speedometer = $Items/Speedometer
+		item_speedometer.value = velocity.z
+		item_speedometer.content_text = "%5.1f %s" % [velocity.z, unit_suffix]
 		# Power
-		power = vehicle.get_power()
-		$Items/Power.value = power
-		$Items/Power.content_text = "%.2f" % power
+		var power = vehicle.get_power()
+		var item_power = $Items/Power
+		item_power.value = power
+		item_power.content_text = "%5.2f" % power
+		if vehicle.has_method("get_power_target"):
+			$Items/Power/PointerTarget.rect_rotation = range_lerp(vehicle.get_power_target(), item_power.minimum, item_power.maximum, -90, 90)
+		else:
+			$Items/Power/PointerTarget.visible = false
 		# Braking
 		if vehicle is Vehicle:
 			$LEDs/BrakeLED.enabled = vehicle.brake > 0.0
