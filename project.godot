@@ -214,7 +214,7 @@ exit={
 
 [locale]
 
-translations=PoolStringArray( "res://Translation/Translation.de.translation", "res://Translation/Translation.en.translation" )
+translations=PoolStringArray( "res://Assets/Translation/Translation.en.translation", "res://Assets/Translation/Translation.de.translation" )
 
 [physics]
 

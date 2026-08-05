@@ -103,7 +103,4 @@ POWER_KEY,Power,Kraft
 BRAKE_KEY,Brake,Bemse
 HELICOPTER_KEY,Helicopter,Helikopter
 DUMP_TRUCK_KEY,Dump truck,Kipper
-DOWNLOADING_UPDATE_KEY,Downloading update...,Update herunterladen...
 MINI_SNOWPLOW_KEY,Mini Snowplow,Mini-Schneeplug
-UPDATE_CHECK_FAILED_KEY,Update check failed {when} with code {code}.,Update-Check Fehlgeschlagen {when} mit Code {code}.
-UP_TO_DATE_KEY,Up to date.,Kein Update verfügbar.
