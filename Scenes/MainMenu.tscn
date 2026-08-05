@@ -69,7 +69,7 @@ align = 1
 [node name="ChooseCar" type="Control" parent="Container/VBoxContainer"]
 margin_top = 38.0
 margin_right = 1120.0
-margin_bottom = 567.0
+margin_bottom = 575.0
 size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="Container/VBoxContainer/ChooseCar"]
@@ -101,42 +101,42 @@ icon = ExtResource( 9 )
 expand_icon = true
 
 [node name="PanelContainer" type="PanelContainer" parent="Container/VBoxContainer"]
-margin_top = 571.0
-margin_right = 573.0
+margin_top = 579.0
+margin_right = 567.0
 margin_bottom = 612.0
 size_flags_horizontal = 0
 
 [node name="Options" type="HBoxContainer" parent="Container/VBoxContainer/PanelContainer"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 566.0
-margin_bottom = 34.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 563.0
+margin_bottom = 29.0
 
 [node name="NameLabel" type="Label" parent="Container/VBoxContainer/PanelContainer/Options"]
-margin_top = 5.0
+margin_top = 4.0
 margin_right = 56.0
-margin_bottom = 22.0
+margin_bottom = 21.0
 text = "NAME_KEY"
 
 [node name="NameLineEdit" type="LineEdit" parent="Container/VBoxContainer/PanelContainer/Options"]
 margin_left = 60.0
 margin_right = 260.0
-margin_bottom = 27.0
+margin_bottom = 25.0
 rect_min_size = Vector2( 200, 0 )
 size_flags_vertical = 4
 placeholder_text = "ENTER_NAME_KEY"
 
 [node name="ServerIPLabel" type="Label" parent="Container/VBoxContainer/PanelContainer/Options"]
 margin_left = 264.0
-margin_top = 5.0
+margin_top = 4.0
 margin_right = 355.0
-margin_bottom = 22.0
+margin_bottom = 21.0
 text = "SERVER_IP_KEY"
 
 [node name="ServerIPLineEdit" type="LineEdit" parent="Container/VBoxContainer/PanelContainer/Options"]
 margin_left = 359.0
 margin_right = 559.0
-margin_bottom = 27.0
+margin_bottom = 25.0
 rect_min_size = Vector2( 200, 0 )
 size_flags_vertical = 4
 placeholder_text = "ENTER_SERVER_IP_KEY"
@@ -224,7 +224,7 @@ window_title = "OPTIONS_KEY"
 margin_left = 8.0
 margin_top = 8.0
 margin_right = 255.0
-margin_bottom = 302.0
+margin_bottom = 298.0
 columns = 2
 
 [node name="MPLabel" type="Label" parent="OptionsDialog/GridContainer"]

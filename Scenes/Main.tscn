@@ -119,10 +119,10 @@ grow_horizontal = 0
 script = ExtResource( 17 )
 
 [node name="GridContainer" type="GridContainer" parent="Control/DebugInfoPanel"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 39.0
-margin_bottom = 66.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 36.0
+margin_bottom = 63.0
 columns = 2
 
 [node name="FPSLabel" type="Label" parent="Control/DebugInfoPanel/GridContainer"]
@@ -510,8 +510,8 @@ script = ExtResource( 4 )
 [node name="GridContainer" type="GridContainer" parent="Control/SettingsDialog"]
 margin_left = 8.0
 margin_top = 8.0
-margin_right = 276.0
-margin_bottom = 224.0
+margin_right = 274.0
+margin_bottom = 214.0
 columns = 2
 
 [node name="EngineForceValueLabel" type="Label" parent="Control/SettingsDialog/GridContainer"]
