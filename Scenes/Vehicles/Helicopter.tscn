@@ -37,6 +37,8 @@ radius = 2.5
 
 [node name="VehicleBody" parent="." index="0"]
 script = ExtResource( 2 )
+rotate_speed = 1.0
+rotate_force = 250.0
 
 [node name="Helicopter" parent="VehicleBody" index="0" instance=ExtResource( 3 )]
 
@@ -64,19 +66,56 @@ anchor_bottom = 1.0
 grow_horizontal = 0
 grow_vertical = 0
 
-[node name="SpeedContainer" type="PanelContainer" parent="VehicleBody/HUD" index="0"]
-margin_right = 14.0
+[node name="Misc" type="PanelContainer" parent="VehicleBody/HUD" index="0"]
+margin_top = 33.0
+margin_right = 152.0
 margin_bottom = 100.0
+size_flags_vertical = 8
 
-[node name="Label" type="Label" parent="VehicleBody/HUD/SpeedContainer" index="0"]
-margin_left = 7.0
-margin_top = 41.0
-margin_right = 7.0
-margin_bottom = 58.0
+[node name="GridContainer" type="GridContainer" parent="VehicleBody/HUD/Misc" index="0"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 148.0
+margin_bottom = 63.0
+columns = 2
+
+[node name="AltitudeLabel" type="Label" parent="VehicleBody/HUD/Misc/GridContainer" index="0"]
+margin_right = 140.0
+margin_bottom = 17.0
+text = "ALTITUDE_KEY"
+
+[node name="Altitude" type="Label" parent="VehicleBody/HUD/Misc/GridContainer" index="1"]
+margin_left = 144.0
+margin_right = 144.0
+margin_bottom = 17.0
+
+[node name="VSpeedLabel" type="Label" parent="VehicleBody/HUD/Misc/GridContainer" index="2"]
+margin_top = 21.0
+margin_right = 140.0
+margin_bottom = 38.0
+text = "VERTICAL_SPEED_KEY"
+
+[node name="VSpeed" type="Label" parent="VehicleBody/HUD/Misc/GridContainer" index="3"]
+margin_left = 144.0
+margin_top = 21.0
+margin_right = 144.0
+margin_bottom = 38.0
+
+[node name="HSpeedLabel" type="Label" parent="VehicleBody/HUD/Misc/GridContainer" index="4"]
+margin_top = 42.0
+margin_right = 140.0
+margin_bottom = 59.0
+text = "HORIZONTAL_SPEED_KEY"
+
+[node name="HSpeed" type="Label" parent="VehicleBody/HUD/Misc/GridContainer" index="5"]
+margin_left = 144.0
+margin_top = 42.0
+margin_right = 144.0
+margin_bottom = 59.0
 
 [node name="Throttle" type="TextureRect" parent="VehicleBody/HUD" index="1"]
-margin_left = 18.0
-margin_right = 68.0
+margin_left = 156.0
+margin_right = 206.0
 margin_bottom = 100.0
 texture = ExtResource( 7 )
 
@@ -91,8 +130,8 @@ align = 1
 valign = 1
 
 [node name="XRotation" type="TextureRect" parent="VehicleBody/HUD" index="2"]
-margin_left = 72.0
-margin_right = 172.0
+margin_left = 210.0
+margin_right = 310.0
 margin_bottom = 100.0
 texture = ExtResource( 5 )
 

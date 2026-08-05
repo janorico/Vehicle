@@ -104,3 +104,6 @@ BRAKE_KEY,Brake,Bemse
 HELICOPTER_KEY,Helicopter,Helikopter
 DUMP_TRUCK_KEY,Dump truck,Kipper
 MINI_SNOWPLOW_KEY,Mini Snowplow,Mini-Schneeplug
+ALTITUDE_KEY,Altitude: ,Höhe: 
+VERTICAL_SPEED_KEY,Vertical Speed: ,Vertikale Geschwindigkeit: 
+HORIZONTAL_SPEED_KEY,Horizontal Speed: ,Horizontale Geschwindigkeit: 

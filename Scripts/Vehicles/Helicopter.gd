@@ -18,7 +18,9 @@ onready var rotor_hub = $Helicopter/RotorHub
 onready var rotor = $Helicopter/RotorHub/Rotor
 onready var rotor_tail = $Helicopter/SteeringRotor
 # HUD
-onready var speed_label = $HUD/SpeedContainer/Label
+onready var altitude_label = $HUD/Misc/GridContainer/Altitude
+onready var vspeed_label = $HUD/Misc/GridContainer/VSpeed
+onready var hspeed_label = $HUD/Misc/GridContainer/HSpeed
 onready var throttle_grip = $HUD/Throttle/Grip
 onready var throttle_label = $HUD/Throttle/Grip/Label
 onready var x_rot_arr = $HUD/XRotation/Arrow
@@ -47,13 +49,10 @@ func _physics_process(delta):
 			throttle_target = clamp(throttle_target + Input.get_axis("throttle_down", "throttle_up") * delta * 0.5, power_min, power_max)
 			throttle = move_toward(throttle, throttle_target, delta * 0.1)
 			# Update HUD
-			var vel_form_str = "%5.1f km/h"
-			var vel = local_velocity * 3.6
-			speed_label.text = "F/B %s\nU/D %s\nL/R %s" % [
-				vel_form_str % vel.z,
-				vel_form_str % vel.y,
-				vel_form_str % vel.x,
-			]
+			var hud_form_str = "%5.1f %s"
+			altitude_label.text = hud_form_str % [ translation.y, "m" ]
+			vspeed_label.text = hud_form_str % [ linear_velocity.y, "m/s" ]
+			hspeed_label.text = hud_form_str % [ Vector2(linear_velocity.x, linear_velocity.z).length(), "m/s" ]
 			throttle_grip.margin_top = (1 - collective) * 80
 			throttle_label.text = "%.1f%%" % (collective * 100)
 			x_rot_arr.rect_rotation = (rotation_degrees.x * -1)
