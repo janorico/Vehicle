@@ -299,7 +299,7 @@ texture = ExtResource( 8 )
 stretch_mode = 6
 script = ExtResource( 9 )
 
-[node name="Map" type="Control" parent="Control/VBoxContainer"]
+[node name="Map" type="TextureRect" parent="Control/VBoxContainer"]
 margin_top = 507.0
 margin_right = 120.0
 margin_bottom = 757.0
@@ -615,7 +615,6 @@ value = 20.0
 [node name="TouchInput" parent="." instance=ExtResource( 22 )]
 
 [connection signal="setup_ready" from="." to="Control/DebugInfoPanel" method="set_vehicle"]
-[connection signal="setup_ready" from="." to="Control/VBoxContainer/Map" method="_initialize"]
 [connection signal="setup_ready" from="." to="Control/SettingsDialog" method="_setup"]
 [connection signal="item_selected" from="Control/VBoxContainer/ViewOptionButton" to="Vehicles" method="_set_view"]
 [connection signal="toggled" from="Control/VBoxContainer/HandbrakeButton" to="Vehicles" method="_handbreak_button_toggled"]
