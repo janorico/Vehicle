@@ -59,6 +59,8 @@ Vehicle contain files from:
   * [License information](#license-information)
   * [Index](#index)
   * [Version History](#version-history)
+    * [Vehicle 14.0.0.0](#vehicle-14000)
+      * [What's new](#whats-new)
     * [Vehicle 12.0.0.0](#vehicle-12000)
       * [What's new](#whats-new)
     * [Vehicle 11.0.0.0](#vehicle-11000)
@@ -87,6 +89,18 @@ Vehicle contain files from:
 <!-- TOC -->
 
 ## Version History
+
+### Vehicle 14.0.0.0
+
+### What's new
+
+* Dashboard Improvements
+* Optimizations
+* Power doesn't depend on wheel count anymore
+* New helicopter controller / HUD
+* Directional map markers
+* Touch input
+* New GUI theme
 
 ### Vehicle 12.0.0.0
 
