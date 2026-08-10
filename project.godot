@@ -70,6 +70,7 @@ Net="*res://Scripts/Network.gd"
 window/size/width=1152
 window/size/height=648
 window/vsync/use_vsync=false
+window/handheld/orientation="sensor_landscape"
 
 [editor]
 
