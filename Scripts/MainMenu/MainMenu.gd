@@ -20,6 +20,7 @@ onready var glow_toggle = $OptionsDialog/GridContainer/GlowCheckButton
 
 
 func _ready() -> void:
+	get_tree().set_screen_stretch(SceneTree.STRETCH_MODE_DISABLED, SceneTree.STRETCH_ASPECT_IGNORE, Vector2(1152, 648), OS.get_screen_dpi() / 100.0)
 	# Last values
 	vehicles.selected_vehicle = Global.last_vehicle
 	vehicles.update_selection()
