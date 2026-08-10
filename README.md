@@ -96,6 +96,7 @@ Vehicle contain files from:
 
 * Dashboard Improvements
 * Optimizations
+* Auto GUI scale
 * Power doesn't depend on wheel count anymore
 * New helicopter controller / HUD
 * Directional map markers
