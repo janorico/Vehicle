@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Scripts/Compass.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/VehicleOptions.gd" type="Script" id=2]
@@ -21,7 +21,6 @@
 [ext_resource path="res://Scripts/MainDashboard.gd" type="Script" id=19]
 [ext_resource path="res://Scripts/Clock.gd" type="Script" id=20]
 [ext_resource path="res://Scripts/StatusLED.gd" type="Script" id=21]
-[ext_resource path="res://Scenes/TouchInput.tscn" type="PackedScene" id=22]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Day"
@@ -611,8 +610,6 @@ margin_right = 66.0
 margin_bottom = 16.0
 min_value = 1.0
 value = 20.0
-
-[node name="TouchInput" parent="." instance=ExtResource( 22 )]
 
 [connection signal="setup_ready" from="." to="Control/DebugInfoPanel" method="set_vehicle"]
 [connection signal="setup_ready" from="." to="Control/SettingsDialog" method="_setup"]

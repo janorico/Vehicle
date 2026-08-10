@@ -4,11 +4,6 @@ onready var dot = $Dot
 var active := -1
 
 
-func _ready() -> void:
-	visible = OS.has_touchscreen_ui_hint()
-	set_physics_process(visible)
-
-
 func _physics_process(_delta: float) -> void:
 	var pos = dot.position
 	var x = pos.x / 125

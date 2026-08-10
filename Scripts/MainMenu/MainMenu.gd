@@ -13,6 +13,7 @@ onready var server_ip_line_edit = $Container/VBoxContainer/PanelContainer/Option
 onready var port_spin_box = $OptionsDialog/GridContainer/PortSpinBox
 onready var max_players_spin_box = $OptionsDialog/GridContainer/MaxPlayersSpinBox
 onready var day_night_cycle_toggle = $OptionsDialog/GridContainer/DayNightCycleCheckButton
+onready var touch_input_toggle = $OptionsDialog/GridContainer/TouchInputCheckButton
 onready var aa_toggle = $OptionsDialog/GridContainer/AACheckButton
 onready var shadows_toggle = $OptionsDialog/GridContainer/ShadowsCheckButton
 onready var tonemap_option_button = $OptionsDialog/GridContainer/TonemapOptionButton
@@ -31,6 +32,7 @@ func _ready() -> void:
 	port_spin_box.value = Global.last_port
 	max_players_spin_box.value = Global.last_max_players
 	day_night_cycle_toggle.pressed = Global.last_day_night_cycle
+	touch_input_toggle.pressed = Global.game_touch_input
 	aa_toggle.pressed = Global.graphics_aa
 	shadows_toggle.pressed = Global.graphics_shadows
 	tonemap_option_button.selected = Global.graphics_tonemap
@@ -53,6 +55,7 @@ func _exit_tree() -> void:
 	Global.last_port = port_spin_box.value
 	Global.last_max_players = max_players_spin_box.value
 	Global.last_day_night_cycle = day_night_cycle_toggle.pressed
+	Global.game_touch_input = touch_input_toggle.pressed
 	Global.graphics_aa = aa_toggle.pressed
 	Global.graphics_shadows = shadows_toggle.pressed
 	Global.graphics_tonemap = tonemap_option_button.selected

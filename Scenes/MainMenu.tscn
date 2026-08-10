@@ -238,126 +238,139 @@ margin_right = 247.0
 margin_bottom = 17.0
 
 [node name="PortLabel" type="Label" parent="OptionsDialog/GridContainer"]
-margin_top = 26.0
+margin_top = 25.0
 margin_right = 133.0
-margin_bottom = 43.0
+margin_bottom = 42.0
 text = "PORT_KEY"
 
 [node name="PortSpinBox" type="SpinBox" parent="OptionsDialog/GridContainer"]
 margin_left = 137.0
 margin_top = 21.0
 margin_right = 247.0
-margin_bottom = 48.0
+margin_bottom = 46.0
 size_flags_horizontal = 3
 size_flags_vertical = 4
 max_value = 65355.0
 value = 31400.0
 
 [node name="MaxPlayersLabel" type="Label" parent="OptionsDialog/GridContainer"]
-margin_top = 57.0
+margin_top = 54.0
 margin_right = 133.0
-margin_bottom = 74.0
+margin_bottom = 71.0
 text = "MAX_PLAYERS_KEY"
 
 [node name="MaxPlayersSpinBox" type="SpinBox" parent="OptionsDialog/GridContainer"]
 margin_left = 137.0
-margin_top = 52.0
+margin_top = 50.0
 margin_right = 247.0
-margin_bottom = 79.0
+margin_bottom = 75.0
 size_flags_horizontal = 3
 min_value = 1.0
 max_value = 1000.0
 value = 100.0
 
 [node name="GameLabel" type="Label" parent="OptionsDialog/GridContainer"]
-margin_top = 83.0
+margin_top = 79.0
 margin_right = 133.0
-margin_bottom = 100.0
+margin_bottom = 96.0
 text = "GAME_KEY"
 
 [node name="GameSeparator" type="HSeparator" parent="OptionsDialog/GridContainer"]
 margin_left = 137.0
-margin_top = 83.0
+margin_top = 79.0
 margin_right = 247.0
-margin_bottom = 100.0
+margin_bottom = 96.0
 
 [node name="DayNightCycleLabel" type="Label" parent="OptionsDialog/GridContainer"]
-margin_top = 111.0
+margin_top = 107.0
 margin_right = 133.0
-margin_bottom = 128.0
+margin_bottom = 124.0
 text = "DAY_NIGHT_CYCLE_KEY"
 
 [node name="DayNightCycleCheckButton" type="CheckButton" parent="OptionsDialog/GridContainer"]
 margin_left = 137.0
-margin_top = 104.0
+margin_top = 100.0
 margin_right = 201.0
-margin_bottom = 136.0
+margin_bottom = 132.0
+size_flags_horizontal = 0
+
+[node name="TouchInputLabel" type="Label" parent="OptionsDialog/GridContainer"]
+margin_top = 143.0
+margin_right = 133.0
+margin_bottom = 160.0
+text = "TOUCH_INPUT"
+
+[node name="TouchInputCheckButton" type="CheckButton" parent="OptionsDialog/GridContainer"]
+margin_left = 137.0
+margin_top = 136.0
+margin_right = 201.0
+margin_bottom = 168.0
 size_flags_horizontal = 0
 
 [node name="GraphicsLabel" type="Label" parent="OptionsDialog/GridContainer"]
-margin_top = 140.0
+margin_top = 172.0
 margin_right = 133.0
-margin_bottom = 157.0
+margin_bottom = 189.0
 text = "GRAPHICS_KEY"
 
 [node name="GraphicsSeparator" type="HSeparator" parent="OptionsDialog/GridContainer"]
 margin_left = 137.0
-margin_top = 140.0
+margin_top = 172.0
 margin_right = 247.0
-margin_bottom = 157.0
+margin_bottom = 189.0
 
 [node name="AALabel" type="Label" parent="OptionsDialog/GridContainer"]
-margin_top = 168.0
+margin_top = 200.0
 margin_right = 133.0
-margin_bottom = 185.0
+margin_bottom = 217.0
 text = "AA_KEY"
 
 [node name="AACheckButton" type="CheckButton" parent="OptionsDialog/GridContainer"]
 margin_left = 137.0
-margin_top = 161.0
+margin_top = 193.0
 margin_right = 201.0
-margin_bottom = 193.0
+margin_bottom = 225.0
 size_flags_horizontal = 0
 
 [node name="ShadowsLabel" type="Label" parent="OptionsDialog/GridContainer"]
-margin_top = 168.0
+margin_top = 236.0
 margin_right = 133.0
-margin_bottom = 185.0
+margin_bottom = 253.0
 text = "SHADOWS_KEY"
 
 [node name="ShadowsCheckButton" type="CheckButton" parent="OptionsDialog/GridContainer"]
 margin_left = 137.0
-margin_top = 161.0
+margin_top = 229.0
 margin_right = 201.0
-margin_bottom = 193.0
+margin_bottom = 261.0
 size_flags_horizontal = 0
 
 [node name="TonemapLabel" type="Label" parent="OptionsDialog/GridContainer"]
-margin_top = 201.0
+margin_top = 269.0
 margin_right = 133.0
-margin_bottom = 218.0
+margin_bottom = 286.0
 text = "TONEMAP_KEY"
 
 [node name="TonemapOptionButton" type="OptionButton" parent="OptionsDialog/GridContainer"]
 margin_left = 137.0
-margin_top = 197.0
-margin_right = 194.0
-margin_bottom = 222.0
+margin_top = 265.0
+margin_right = 247.0
+margin_bottom = 290.0
 text = "Linear"
 items = [ "Linear", null, false, 0, null, "Reinhardt", null, false, 1, null, "Filmic", null, false, 2, null, "ACES", null, false, 3, null, "ACES Fitted", null, false, 4, null ]
 selected = 0
 
 [node name="GlowLabel" type="Label" parent="OptionsDialog/GridContainer"]
-margin_top = 168.0
+margin_top = 301.0
 margin_right = 133.0
-margin_bottom = 185.0
+margin_bottom = 318.0
 text = "GLOW_KEY"
 
 [node name="GlowCheckButton" type="CheckButton" parent="OptionsDialog/GridContainer"]
 margin_left = 137.0
-margin_top = 161.0
+margin_top = 294.0
 margin_right = 201.0
-margin_bottom = 193.0
+margin_bottom = 326.0
 size_flags_horizontal = 0
 
 [node name="AboutDialog" type="AcceptDialog" parent="."]

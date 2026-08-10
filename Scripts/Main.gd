@@ -6,6 +6,8 @@ func _ready():
 	if not Global.setted_up_bool and not Net.is_offline and not Net.is_host:
 		yield(Global, "setted_up")
 	# Apply settings
+	if Global.game_touch_input:
+		add_child(preload("res://Scenes/TouchInput.tscn").instance())
 	$Sun.shadow_enabled = Global.graphics_shadows
 	get_viewport().fxaa = Global.graphics_aa
 	# Setup

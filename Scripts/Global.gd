@@ -85,6 +85,7 @@ const LAST_PORT_KEY = "last_port"
 const LAST_MAX_PLAYERS_KEY = "last_max_players"
 const LAST_DAY_NIGTH_CYCLE = "last_day_night_cycle"
 const LAST_USED_VIEW_KEY = "last_used_view"
+const GAME_TOUCH_INPUT = "game_touch_input"
 const GRAPHICS_AA_KEY = "graphics_aa"
 const GRAPHICS_SHADOWS_KEY = "graphics_shadows"
 const GRAPHICS_TONEMAP_KEY = "graphics_tonemap"
@@ -99,6 +100,7 @@ var last_port := 31400
 var last_max_players := 20
 var last_day_night_cycle := false
 var last_used_view = VehicleBase.CameraType.WINDSCREEN
+var game_touch_input := false
 var graphics_aa := true
 var graphics_shadows := false
 var graphics_tonemap := 4
@@ -156,6 +158,7 @@ func load_last_states():
 		if data.has(LAST_MAX_PLAYERS_KEY):		 last_max_players = data[LAST_MAX_PLAYERS_KEY]
 		if data.has(LAST_DAY_NIGTH_CYCLE):		 last_day_night_cycle = data[LAST_DAY_NIGTH_CYCLE]
 		if data.has(LAST_USED_VIEW_KEY):		 last_used_view = data[LAST_USED_VIEW_KEY]
+		if data.has(GAME_TOUCH_INPUT):			 game_touch_input = data[GAME_TOUCH_INPUT]
 		if data.has(GRAPHICS_AA_KEY):			 graphics_aa = data[GRAPHICS_AA_KEY]
 		if data.has(GRAPHICS_SHADOWS_KEY):		 graphics_shadows = data[GRAPHICS_SHADOWS_KEY]
 		if data.has(GRAPHICS_TONEMAP_KEY):		 graphics_tonemap = data[GRAPHICS_TONEMAP_KEY]
@@ -201,6 +204,7 @@ func save_last_states():
 		LAST_MAX_PLAYERS_KEY: last_max_players,
 		LAST_DAY_NIGTH_CYCLE: last_day_night_cycle,
 		LAST_USED_VIEW_KEY: last_used_view,
+		GAME_TOUCH_INPUT: game_touch_input,
 		GRAPHICS_AA_KEY: graphics_aa,
 		GRAPHICS_SHADOWS_KEY: graphics_shadows,
 		GRAPHICS_TONEMAP_KEY: graphics_tonemap,

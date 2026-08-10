@@ -5,6 +5,7 @@ PORT_KEY,Port: ,Port:
 MAX_PLAYERS_KEY,Max players: ,Maximale Spieler: 
 GAME_KEY,Game,Spiel
 DAY_NIGHT_CYCLE_KEY,Day-night cycle: ,Tag-Nacht-Zyklus: 
+TOUCH_INPUT,Touch input: ,Toucheingabe: 
 GRAPHICS_KEY,Graphics,Grafik
 AA_KEY,AA: ,AA: 
 SHADOWS_KEY,Shadows: ,Schatten: 

@@ -31,4 +31,3 @@ offset = Vector2( 125, 125 )
 position = Vector2( 130, -144 )
 normal = ExtResource( 4 )
 action = "brake"
-visibility_mode = 1
